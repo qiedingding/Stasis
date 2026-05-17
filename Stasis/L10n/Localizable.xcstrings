@@ -812,33 +812,8 @@
     "Discharge the battery to your charge limit when plugged in above the target level." : {
 
     },
-    "Display the current battery percentage next to the status icon in the menu bar." : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Den aktuellen Batterieprozentsatz neben dem Statussymbol in der Menüleiste anzeigen."
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar el porcentaje de batería actual junto al ícono en la barra de menú."
-          }
-        },
-        "es-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar el porcentaje de batería actual junto al ícono en la barra de menú."
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "メニューバーのステータスアイコンの横にバッテリー残量を表示します。"
-          }
-        }
-      }
+    "Display battery percentage next to or inside the menu bar icon." : {
+
     },
     "Enable heat protection" : {
       "localizations" : {
@@ -1041,6 +1016,12 @@
           }
         }
       }
+    },
+    "Hidden" : {
+
+    },
+    "Inside icon" : {
+
     },
     "Launch at login" : {
       "localizations" : {
@@ -1265,6 +1246,9 @@
           }
         }
       }
+    },
+    "Next to icon" : {
+
     },
     "Notifications" : {
       "localizations" : {
@@ -1580,35 +1564,10 @@
         }
       }
     },
-    "Show battery percentage" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Batterieprozentsatz anzeigen"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar porcentaje de batería"
-          }
-        },
-        "es-US" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mostrar porcentaje de batería"
-          }
-        },
-        "ja" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "バッテリー残量を表示"
-          }
-        }
-      }
-    },
     "Show battery state" : {
+
+    },
+    "Show percentage" : {
 
     },
     "Sleep Prevention" : {
