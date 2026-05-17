@@ -32,6 +32,12 @@
             "state" : "translated",
             "value" : "アダプタ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电器"
+          }
         }
       }
     },
@@ -59,6 +65,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "このデバイスではアダプタの制御はサポートされていません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台设备不支持充电器控制。"
           }
         }
       }
@@ -88,6 +100,12 @@
             "state" : "translated",
             "value" : "アダプタ電力"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电器功率指标"
+          }
         }
       }
     },
@@ -115,6 +133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "詳細"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "高级设置"
           }
         }
       }
@@ -147,6 +171,12 @@
             "state" : "translated",
             "value" : "自動放電"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自动放电"
+          }
         }
       }
     },
@@ -178,6 +208,12 @@
             "state" : "translated",
             "value" : "バッテリー"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池"
+          }
         }
       }
     },
@@ -205,6 +241,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "バッテリーの状態"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池健康"
           }
         }
       }
@@ -234,6 +276,12 @@
             "state" : "translated",
             "value" : "バッテリーモード"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池模式"
+          }
         }
       }
     },
@@ -261,6 +309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "バッテリーモード"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池模式"
           }
         }
       }
@@ -290,6 +344,12 @@
             "state" : "translated",
             "value" : "バッテリー電力"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池功率指标"
+          }
         }
       }
     },
@@ -318,6 +378,12 @@
             "state" : "translated",
             "value" : "バッテリー測定値"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池测量值"
+          }
         }
       }
     },
@@ -345,6 +411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "バッテリー温度"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池温度"
           }
         }
       }
@@ -380,6 +452,12 @@
             "state" : "translated",
             "value" : "充電上限"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电上限"
+          }
         }
       }
     },
@@ -411,6 +489,12 @@
             "state" : "translated",
             "value" : "充電管理"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电管理"
+          }
         }
       }
     },
@@ -438,6 +522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "このデバイスでは充電管理はサポートされていません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台设备不支持充电管理。"
           }
         }
       }
@@ -467,6 +557,12 @@
             "state" : "translated",
             "value" : "充電"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电中"
+          }
         }
       }
     },
@@ -494,6 +590,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "このデバイスでは充電の制御はサポートされていません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台设备不支持充电控制。"
           }
         }
       }
@@ -523,6 +625,12 @@
             "state" : "translated",
             "value" : "充電を一時停止"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电暂停中"
+          }
         }
       }
     },
@@ -550,6 +658,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "充電を再開"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复充电"
           }
         }
       }
@@ -579,6 +693,12 @@
             "state" : "translated",
             "value" : "充電再開レベル"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复充电的数值"
+          }
         }
       }
     },
@@ -606,6 +726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "充電状態の変更"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电状态变更"
           }
         }
       }
@@ -635,6 +761,12 @@
             "state" : "translated",
             "value" : "再確認"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次确认"
+          }
         }
       }
     },
@@ -662,6 +794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stasisが通知を送信するタイミングを制御します。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "控制Stasis何时发送通知"
           }
         }
       }
@@ -691,6 +829,12 @@
             "state" : "translated",
             "value" : "充放電回数"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充放电次数"
+          }
         }
       }
     },
@@ -718,6 +862,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "充放電回数"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充放电次数"
           }
         }
       }
@@ -747,6 +897,12 @@
             "state" : "translated",
             "value" : "ダッシュボード"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仪表板"
+          }
         }
       }
     },
@@ -774,6 +930,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "すべての通知を無効にする"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "禁止所有通知"
           }
         }
       }
@@ -805,6 +967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "放電"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放电"
           }
         }
       }
@@ -840,6 +1008,12 @@
             "state" : "translated",
             "value" : "熱保護を有効にする"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用过热保护"
+          }
         }
       }
     },
@@ -870,6 +1044,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "充電ヘルパーのインストールに失敗しました"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电助手安装失败"
           }
         }
       }
@@ -902,6 +1082,12 @@
             "state" : "translated",
             "value" : "一般"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
+          }
         }
       }
     },
@@ -929,6 +1115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニューに表示されるシステムとバッテリーの状態情報。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在菜单列表中显示的一般系统和电池状态信息。"
           }
         }
       }
@@ -958,6 +1150,12 @@
             "state" : "translated",
             "value" : "緑"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "绿色"
+          }
         }
       }
     },
@@ -986,6 +1184,12 @@
             "state" : "translated",
             "value" : "状態"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康"
+          }
         }
       }
     },
@@ -1013,6 +1217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "熱保護"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "过热保护"
           }
         }
       }
@@ -1048,6 +1258,12 @@
             "state" : "translated",
             "value" : "ログイン時に起動"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在登录时打开"
+          }
         }
       }
     },
@@ -1075,6 +1291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "熱保護中のLED"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "过热保护时的LED状态"
           }
         }
       }
@@ -1104,6 +1326,12 @@
             "state" : "translated",
             "value" : "バッテリー寿命を延ばすために最大充電レベルを制限します。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为了延长电池寿命限制充电上限"
+          }
         }
       }
     },
@@ -1131,6 +1359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "MagSafe LEDの制御"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MagSafe LED 的控制"
           }
         }
       }
@@ -1160,6 +1394,12 @@
             "state" : "translated",
             "value" : "このデバイスではMagSafe LEDの制御はサポートされていません。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这台设备不支持MagSafe LED控制"
+          }
         }
       }
     },
@@ -1187,6 +1427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "充電を管理"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "充电管理"
           }
         }
       }
@@ -1216,6 +1462,12 @@
             "state" : "translated",
             "value" : "MagSafe LEDを管理"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MagSafe LED 管理"
+          }
         }
       }
     },
@@ -1243,6 +1495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メニューバーアイコン"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单栏图标"
           }
         }
       }
@@ -1275,6 +1533,12 @@
             "state" : "translated",
             "value" : "通知"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
+          }
         }
       }
     },
@@ -1303,6 +1567,12 @@
             "state" : "translated",
             "value" : "オフ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
+          }
         }
       }
     },
@@ -1327,6 +1597,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
@@ -1359,6 +1635,12 @@
             "state" : "translated",
             "value" : "オレンジ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "橙色"
+          }
         }
       }
     },
@@ -1386,6 +1668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "バッテリー温度がしきい値を超えた場合に充電を一時停止します。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当电池温度超过临界点时暂定充电"
           }
         }
       }
@@ -1415,6 +1703,12 @@
             "state" : "translated",
             "value" : "電力"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电力"
+          }
         }
       }
     },
@@ -1442,6 +1736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "電力分配図"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电力分配图"
           }
         }
       }
@@ -1471,6 +1771,12 @@
             "state" : "translated",
             "value" : "電源"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电源"
+          }
         }
       }
     },
@@ -1498,6 +1804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "電源"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电源"
           }
         }
       }
@@ -1530,6 +1842,12 @@
             "state" : "translated",
             "value" : "終了"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "终止"
+          }
         }
       }
     },
@@ -1561,6 +1879,12 @@
             "state" : "translated",
             "value" : "設定"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
+          }
         }
       }
     },
@@ -1568,7 +1892,14 @@
 
     },
     "Show percentage" : {
-
+      "localizations" : {
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示电池百分比"
+          }
+        }
+      }
     },
     "Sleep Prevention" : {
 
@@ -1598,6 +1929,12 @@
             "state" : "translated",
             "value" : "起動"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启动"
+          }
         }
       }
     },
@@ -1625,6 +1962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stasisの設定"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stasis 设置"
           }
         }
       }
@@ -1654,6 +1997,12 @@
             "state" : "translated",
             "value" : "ステータス"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "状态"
+          }
         }
       }
     },
@@ -1678,6 +2027,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "温度"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "温度"
@@ -1710,6 +2065,12 @@
             "state" : "translated",
             "value" : "温度制限"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "温度限制"
+          }
         }
       }
     },
@@ -1741,6 +2102,12 @@
             "state" : "translated",
             "value" : "残り時間"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剩余时间"
+          }
         }
       }
     },
@@ -1771,6 +2138,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "稼働時間"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开机时长"
           }
         }
       }
@@ -1805,6 +2178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "表示"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "视觉图"
           }
         }
       }
