@@ -7,6 +7,8 @@ struct BatteryIndicatorView: View {
     var percentageDisplayLocation: PercentageDisplayLocation = .hidden
     var showState: Bool = false
 
+    @State private var insidePercentageFrame: CGRect?
+
     private var shouldShowInsidePercentage: Bool {
         percentageDisplayLocation == .insideIcon
     }
@@ -16,7 +18,7 @@ struct BatteryIndicatorView: View {
     }
 
     private var isCritical: Bool {
-        showState && batteryLevel <= 10
+        showState && batteryLevel <= 20
     }
 
     private var fillColor: Color {
@@ -27,21 +29,11 @@ struct BatteryIndicatorView: View {
     }
 
     private var foregroundColor: Color {
-        if isCritical { return .white }
-        if isLowPowerModeEnabled { return .black }
-        if chargingMode == .charging { return .white }
-        return .white  // ignored when usesPassthrough
+        isLowPowerModeEnabled ? .black : .white
     }
 
     private var usesPassthrough: Bool {
         !isCritical && !isLowPowerModeEnabled && chargingMode != .charging
-    }
-
-    private var trackColor: Color {
-        if isCritical { return .red }
-        if isLowPowerModeEnabled { return .yellow }
-        if chargingMode == .charging { return .green }
-        return .primary
     }
 
     private enum Layout {
@@ -53,8 +45,11 @@ struct BatteryIndicatorView: View {
         static let cornerRadius: CGFloat = 3
         static let strokeWidth: CGFloat = 1
         static let fillInset: CGFloat = 1.5
-        static let trackOpacity: CGFloat = 0.18
         static let outlineOpacity: CGFloat = 0.4
+        static let glyphEdgeHint: CGFloat = 2.5
+        static let knockoutCoordinateSpace = "knockoutBody"
+        static let insideTrackColor = Color(nsColor: .tertiaryLabelColor)
+        static let levelAnimation: Animation = .easeInOut(duration: 0.25)
     }
 
     var body: some View {
@@ -75,6 +70,19 @@ struct BatteryIndicatorView: View {
             }
         }
         .foregroundStyle(.primary)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityDescription)
+    }
+
+    private var accessibilityDescription: String {
+        var parts = ["Battery \(batteryLevel) percent"]
+        switch chargingMode {
+        case .charging: parts.append("charging")
+        case .pluggedIn: parts.append("plugged in")
+        case .discharging: break
+        }
+        if isLowPowerModeEnabled { parts.append("low power mode") }
+        return parts.joined(separator: ", ")
     }
 
     @ViewBuilder
@@ -90,44 +98,62 @@ struct BatteryIndicatorView: View {
 
     private var knockoutBatteryBody: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: Layout.cornerRadius)
-                .fill(trackColor.opacity(Layout.trackOpacity))
+            Rectangle()
+                .fill(Layout.insideTrackColor)
 
             GeometryReader { geo in
-                let fillWidth =
-                    (geo.size.width - Layout.fillInset * 2)
-                    * CGFloat(batteryLevel)
-                    / 100
-                RoundedRectangle(
-                    cornerRadius: Layout.cornerRadius - Layout.fillInset
-                )
-                .fill(fillColor)
-                .frame(width: max(0, fillWidth))
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(Layout.fillInset)
+                Rectangle()
+                    .fill(fillColor)
+                    .frame(width: fillWidth(usableWidth: geo.size.width))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .animation(Layout.levelAnimation, value: batteryLevel)
             }
 
             insideContent
-
-            RoundedRectangle(cornerRadius: Layout.cornerRadius)
-                .stroke(lineWidth: Layout.strokeWidth)
-                .opacity(Layout.outlineOpacity)
+        }
+        .coordinateSpace(name: Layout.knockoutCoordinateSpace)
+        .onPreferenceChange(InsidePercentageFramePreferenceKey.self) {
+            insidePercentageFrame = $0
         }
         .compositingGroup()
+        .clipShape(RoundedRectangle(cornerRadius: Layout.cornerRadius))
+    }
+
+    private func fillWidth(usableWidth: CGFloat) -> CGFloat {
+        let raw = max(0, usableWidth * CGFloat(batteryLevel) / 100)
+        guard usesPassthrough, let textFrame = insidePercentageFrame else {
+            return raw
+        }
+        let digitCount = CGFloat(String(batteryLevel).count)
+        let digitWidth = textFrame.width / digitCount
+        let leftEdge = textFrame.minX
+        let rawIndex = ((raw - leftEdge) / digitWidth).rounded()
+        let index = min(max(rawIndex, 0), digitCount)
+        let snapped = min(max(leftEdge + index * digitWidth, 0), usableWidth)
+        return abs(snapped - raw) < Layout.glyphEdgeHint ? snapped : raw
     }
 
     private var insideContent: some View {
-        let blend: BlendMode = usesPassthrough ? .destinationOut : .normal
-        return HStack(spacing: 1) {
+        HStack(spacing: 1) {
             Text(verbatim: "\(batteryLevel)")
                 .font(.system(size: 8, weight: .heavy))
                 .monospacedDigit()
+                .background {
+                    GeometryReader { textGeo in
+                        Color.clear.preference(
+                            key: InsidePercentageFramePreferenceKey.self,
+                            value: textGeo.frame(
+                                in: .named(Layout.knockoutCoordinateSpace)
+                            )
+                        )
+                    }
+                }
             chargingGlyph
                 .font(.system(size: 6, weight: .black))
         }
         .lineLimit(1)
         .foregroundStyle(foregroundColor)
-        .blendMode(blend)
+        .blendMode(usesPassthrough ? .destinationOut : .normal)
     }
 
     @ViewBuilder
@@ -158,6 +184,7 @@ struct BatteryIndicatorView: View {
                 .frame(width: max(0, fillWidth))
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(Layout.fillInset)
+                .animation(Layout.levelAnimation, value: batteryLevel)
             }
         }
         .overlay {
@@ -174,6 +201,13 @@ struct BatteryIndicatorView: View {
                     .shadow(color: .black.opacity(0.6), radius: 0.5)
             }
         }
+    }
+}
+
+private struct InsidePercentageFramePreferenceKey: PreferenceKey {
+    static var defaultValue: CGRect?
+    static func reduce(value: inout CGRect?, nextValue: () -> CGRect?) {
+        value = nextValue() ?? value
     }
 }
 
