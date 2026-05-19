@@ -39,14 +39,18 @@ struct BatteryIndicatorView: View {
     private enum Layout {
         static let batteryHeight: CGFloat = 12
         static let batteryWidth: CGFloat = 24
+        static let insideBatteryHeight: CGFloat = 14
         static let insideBatteryWidth: CGFloat = 28
         static let terminalWidth: CGFloat = 2
         static let terminalHeight: CGFloat = 5
+        static let insideTerminalWidth: CGFloat = 2.5
+        static let insideTerminalHeight: CGFloat = 6
         static let cornerRadius: CGFloat = 3
+        static let insideCornerRadius: CGFloat = 3.5
         static let strokeWidth: CGFloat = 1
         static let fillInset: CGFloat = 1.5
         static let outlineOpacity: CGFloat = 0.4
-        static let glyphEdgeHint: CGFloat = 2.5
+        static let glyphEdgeHint: CGFloat = 3
         static let knockoutCoordinateSpace = "knockoutBody"
         static let insideTrackColor = Color(nsColor: .tertiaryLabelColor)
         static let levelAnimation: Animation = .easeInOut(duration: 0.25)
@@ -62,11 +66,19 @@ struct BatteryIndicatorView: View {
 
             HStack(spacing: 0) {
                 batteryBody
-                BatteryTerminal(
-                    width: Layout.terminalWidth,
-                    height: Layout.terminalHeight,
-                    cornerRadius: 1.25
-                )
+                if shouldShowInsidePercentage {
+                    BatteryTerminal(
+                        width: Layout.insideTerminalWidth,
+                        height: Layout.insideTerminalHeight,
+                        cornerRadius: 1.5
+                    )
+                } else {
+                    BatteryTerminal(
+                        width: Layout.terminalWidth,
+                        height: Layout.terminalHeight,
+                        cornerRadius: 1.25
+                    )
+                }
             }
         }
         .foregroundStyle(.primary)
@@ -89,7 +101,7 @@ struct BatteryIndicatorView: View {
     private var batteryBody: some View {
         if shouldShowInsidePercentage {
             knockoutBatteryBody
-                .frame(width: Layout.insideBatteryWidth, height: Layout.batteryHeight)
+                .frame(width: Layout.insideBatteryWidth, height: Layout.insideBatteryHeight)
         } else {
             overlayBatteryBody
                 .frame(width: Layout.batteryWidth, height: Layout.batteryHeight)
@@ -116,7 +128,7 @@ struct BatteryIndicatorView: View {
             insidePercentageFrame = $0
         }
         .compositingGroup()
-        .clipShape(RoundedRectangle(cornerRadius: Layout.cornerRadius))
+        .clipShape(RoundedRectangle(cornerRadius: Layout.insideCornerRadius))
     }
 
     private func fillWidth(usableWidth: CGFloat) -> CGFloat {
@@ -134,9 +146,9 @@ struct BatteryIndicatorView: View {
     }
 
     private var insideContent: some View {
-        HStack(spacing: 1) {
+        HStack(spacing: 1.5) {
             Text(verbatim: "\(batteryLevel)")
-                .font(.system(size: 8, weight: .heavy))
+                .font(.system(size: 10, weight: .heavy))
                 .monospacedDigit()
                 .background {
                     GeometryReader { textGeo in
@@ -149,7 +161,7 @@ struct BatteryIndicatorView: View {
                     }
                 }
             chargingGlyph
-                .font(.system(size: 6, weight: .black))
+                .font(.system(size: 8, weight: .black))
         }
         .lineLimit(1)
         .foregroundStyle(foregroundColor)
