@@ -13,7 +13,7 @@ class MenuViewModel {
     var batteryPercentageText: String = "0%"
     var powerSourceText: String = "Battery"
     var timeRemainingText: String = "Calculating..."
-    var uptimeText: String = "00:00"
+    var uptimeText: String = "0m"
     var batteryModeText: String = "Unknown"
     var batteryTemperatureText: String = "0°C"
     var externalInputText: String = "0V @ 0A"
@@ -189,10 +189,12 @@ class MenuViewModel {
             return
         }
 
-        let uptime = Date().timeIntervalSince(bootTimestamp)
-        let hours = Int(uptime) / 3600
-        let minutes = (Int(uptime) % 3600) / 60
-        uptimeText = String(format: "%02d:%02d", hours, minutes)
+        let elapsed = Duration.seconds(Date().timeIntervalSince(bootTimestamp))
+        uptimeText = elapsed.formatted(.units(
+            allowed: [.days, .hours, .minutes],
+            width: .condensedAbbreviated,
+            zeroValueUnits: .hide
+        ))
     }
 
     private func startUptimeTimer() {
