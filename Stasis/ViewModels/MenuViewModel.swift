@@ -125,7 +125,13 @@ class MenuViewModel {
         }
 
         let formatted = formatTimeRemaining(minutes: metrics.timeRemaining)
-        timeRemainingText = formatted.isEmpty ? "Calculating..." : formatted
+        if !formatted.isEmpty {
+            timeRemainingText = formatted
+        } else if derivedPowerSource == .acAdapter && !metrics.isCharging {
+            timeRemainingText = "Not Charging"
+        } else {
+            timeRemainingText = "Calculating..."
+        }
 
         updateUptimeText()
 
