@@ -134,14 +134,19 @@ class ChargeManager {
                 desiredLED = Defaults[.manageMagSafeLED] ? .green : nil
                 chargingStateReason = "Sailing mode is maintaining charge below \(chargeLimit)%"
             } else {
+                let droppedOutOfSailingRange = !inSailingRange && hasReachedChargeLimit
                 hasReachedChargeLimit = false
                 desiredCharging = true
                 desiredAdapter = true
                 desiredLED = Defaults[.manageMagSafeLED] ? .orange : nil
-                chargingStateReason =
-                    inSailingRange
-                    ? "Charging to reach charge limit of \(chargeLimit)%"
-                    : "Battery dropped below sailing threshold of \(sailingThreshold)%"
+                if inSailingRange {
+                    chargingStateReason = "Charging to reach charge limit of \(chargeLimit)%"
+                } else if droppedOutOfSailingRange {
+                    chargingStateReason =
+                        "Battery dropped below sailing threshold of \(sailingThreshold)%"
+                } else {
+                    chargingStateReason = "Battery is below the charge limit of \(chargeLimit)%"
+                }
             }
         } else {
             desiredCharging = true
