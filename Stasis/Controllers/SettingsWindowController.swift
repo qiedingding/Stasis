@@ -3,12 +3,13 @@ import SwiftUI
 import smc_power
 
 @MainActor
-class SettingsWindowController {
+final class SettingsWindowController: NSObject, NSWindowDelegate {
     private var window: NSWindow?
     private let capabilities: DeviceCapabilities
 
     init(capabilities: DeviceCapabilities) {
         self.capabilities = capabilities
+        super.init()
     }
 
     func showSettings() {
@@ -27,10 +28,17 @@ class SettingsWindowController {
         newWindow.center()
         newWindow.setFrameAutosaveName("SettingsWindow")
         newWindow.isReleasedWhenClosed = false
+        newWindow.delegate = self
         newWindow.makeKeyAndOrderFront(nil)
 
         NSApp.activate(ignoringOtherApps: true)
 
         self.window = newWindow
+    }
+
+    nonisolated func windowWillClose(_ notification: Notification) {
+        MainActor.assumeIsolated {
+            window = nil
+        }
     }
 }
