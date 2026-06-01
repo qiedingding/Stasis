@@ -174,6 +174,12 @@
             "state" : "translated",
             "value" : "Cho phép Stasis trong Cài đặt hệ thống → Mục đăng nhập để tiếp tục."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“系统设置 → 登录项”中批准 Stasis 以继续。"
+          }
         }
       }
     },
@@ -223,6 +229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tự động sạc lại khi pin giảm xuống dưới ngưỡng giới hạn sạc"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当电池电量低于相对于充电上限的阈值时，自动恢复充电。"
           }
         }
       }
@@ -514,6 +526,12 @@
             "state" : "translated",
             "value" : "Nhấp nháy cam nhanh"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "橙色快速闪烁"
+          }
         }
       }
     },
@@ -523,6 +541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhấp nháy cam chậm"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "橙色慢速闪烁"
           }
         }
       }
@@ -573,6 +597,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bỏ qua giới hạn sạc"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "覆盖充电上限"
           }
         }
       }
@@ -1144,6 +1174,12 @@
             "state" : "translated",
             "value" : "Không ngủ cho đến khi đạt giới hạn sạc"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在达到充电上限前禁止睡眠"
+          }
         }
       }
     },
@@ -1194,6 +1230,12 @@
             "state" : "translated",
             "value" : "Xả pin về mức giới hạn khi cắm sạc nếu pin hiện tại cao hơn mức mục tiêu."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当接通电源且电量高于目标值时，将电池放电至充电上限。"
+          }
         }
       }
     },
@@ -1203,6 +1245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hiển thị phần trăm pin bên cạnh hoặc trong biểu tượng thanh menu."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在菜单栏图标旁边或内部显示电池百分比。"
           }
         }
       }
@@ -1254,6 +1302,12 @@
             "state" : "translated",
             "value" : "Bật chế độ thả trôi pin"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "启用航行模式"
+          }
         }
       }
     },
@@ -1303,6 +1357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ép xả pin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "强制放电"
           }
         }
       }
@@ -1514,6 +1574,12 @@
             "state" : "translated",
             "value" : "Ẩn"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏"
+          }
         }
       }
     },
@@ -1523,6 +1589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trong biểu tượng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标内"
           }
         }
       }
@@ -1853,6 +1925,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bên cạnh biểu tượng"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标旁"
           }
         }
       }
@@ -2224,6 +2302,12 @@
             "state" : "translated",
             "value" : "Ngăn máy Mac chuyển sang chế độ ngủ khi đang sạc đến mức giới hạn. Chế độ ngủ sẽ tự động kích hoạt lại khi đạt mức giới hạn hoặc khi ngắt kết nối bộ sạc."
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在向充电上限充电期间阻止 Mac 进入睡眠。一旦达到上限或断开充电器，将重新启用睡眠。"
+          }
         }
       }
     },
@@ -2273,6 +2357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chế độ thả trôi pin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "航行模式"
           }
         }
       }
@@ -2324,6 +2414,12 @@
             "state" : "translated",
             "value" : "Hiển thị trạng thái pin"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "显示电池状态"
+          }
         }
       }
     },
@@ -2349,6 +2445,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ngăn chế độ ngủ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "防止睡眠"
           }
         }
       }
@@ -2560,6 +2662,12 @@
             "state" : "translated",
             "value" : "Ngưỡng dưới giới hạn"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低于上限的阈值"
+          }
         }
       }
     },
@@ -2609,6 +2717,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thời gian dự kiến xả pin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距放电的时间"
           }
         }
       }
@@ -2660,6 +2774,12 @@
             "state" : "translated",
             "value" : "Dùng phần trăm pin từ phần cứng"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用硬件百分比"
+          }
         }
       }
     },
@@ -2669,6 +2789,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sử dụng phần trăm pin thực tế từ phần cứng thay vì giá trị đã được hiệu chuẩn của macOS."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用原始电池百分比，而非 macOS 校准后的数值。"
           }
         }
       }
